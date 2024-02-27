@@ -1,0 +1,48 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-light mb-4 p-0">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/comping.png" alt="Logo" height="50" width="200">
+    </a>
+
+    <div class="" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link d-flex flex-column align-items-center" href="#">
+              <fa-icon [icon]="faHouse"/>
+              <span>Home</span>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex flex-column align-items-center" routerLink="/services">
+            <fa-icon [icon]="faHandHoldingDollar"/>
+            <span>Services</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex flex-column align-items-center" routerLink="/service-providers" >
+            <fa-icon [icon]="faPeopleGroup"/>
+            <span>Service providers</span>
+          </a>
+        </li>       
+        <li>
+          <a class="nav-link d-flex flex-column align-items-center me-4" >
+            <form class="d-flex" [formGroup]="searchForm" (ngSubmit)="search() ">
+              <select formControlName="selectedOption" class="form-select mt-1 selectInput" aria-label="Default select example">
+                <option value="0" selected>All</option>
+                <option value="1">By service</option>
+                <option value="2">By provider</option>
+              </select>
+              <input formControlName="searchInput" class="form-control me-2 mt-1 nav-search" type="search" placeholder="Search" aria-label="Search">
+             
+              <button class="btn btn-primary mt-1" type="submit">            <fa-icon [icon]="faSearch  "/>
+              </button>
+            </form>
+          </a>
+        </li>    
+
+
+      </ul>
+  
+    </div>
+  

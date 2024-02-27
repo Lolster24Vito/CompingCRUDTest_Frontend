@@ -1,0 +1,30 @@
+
+.navbar {
+    background: #1A3C4F;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .navbar-nav li a {
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  fa-icon{
+    color: white;
+  }
+  .nav-item:hover{
+    background-color: red;
+    border-radius: 10px;
+  }
+  #points{
+    margin-top: 1%;
+  }
+  .rightNavbar{
+    margin-right:7%;
+  }
+  .nav-search{
+    width: 300px;
+  }
+  .selectInput{
+    width:auto;
+  }

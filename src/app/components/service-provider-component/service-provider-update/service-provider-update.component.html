@@ -1,0 +1,38 @@
+<p>service-provider-update works!</p>
+
+
+{{ provider | json }}
+<br>
+{{ selectedServicesList | json }}
+
+
+<div class="container main-container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            
+            <form [formGroup]="updateProviderForm" (ngSubmit)="updateServiceProvider()">
+
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Provider name</label>
+                <input  type="text" class="form-control" id="nameInput" 
+                formControlName="nameInput"  [(ngModel)]="provider.name">
+              </div>
+              <div class="mb-3">
+                <label  class="form-label">Select Services(ran out of time to  implement so services saves in backend)</label>
+                <select multiple class="form-control"   
+                 id="servicesInput" formControlName="servicesInput" [(ngModel)]="provider.services"  (change)='onOptionsSelected($event)'>
+                  <!-- Populate options based on your services data -->
+                  <option *ngFor="let service of allServices" [ngValue]="service.id">{{ service.descriptionService }}</option>
+                </select>
+              </div>
+            
+              <div class="mb-3 d-flex flex-column align-items-center ">
+                <button type="submit" class="btn btn-primary w-100">Change service provider information</button>
+              </div>
+            </form>
+              <div class="mt-5 mx-auto text-center">
+                <a routerLink="/service-providers/" class="btn btn-info">Go back</a>
+              </div>
+        </div>
+    </div>
+</div>

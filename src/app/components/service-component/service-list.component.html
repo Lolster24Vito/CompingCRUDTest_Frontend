@@ -1,0 +1,49 @@
+<p>service-component works!</p>
+<div class="container col-xl-10 col-xxl-8 px-4 py-5 mx-auto">
+  
+<div *ngFor="let service of services">
+  <div class="row align-items-center">
+
+    <div class="col-lg-7 text-lg-start">
+
+
+    <h5>{{ service.descriptionService }}</h5>
+  </div>
+  <div class="col-md-10 mx-auto col-lg-5">
+
+      <a class="btn btn-primary m-1" routerLink="/services/{{service.id}}">Details</a>
+
+      <a  class="btn btn-warning m-1"  routerLink="/services/update/{{service.id}}">Update</a>
+      <a class="btn btn-danger m-1" href="#" (click)="deleteService(service.id!)">Delete</a>
+    </div>
+
+
+
+    <!-- Add buttons for update and delete -->
+  </div>
+</div>
+</div>
+
+
+
+
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Create new service </h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Quickly design and customize responsive services with CompingCrudTest, the world's 
+        most popular service provider, featuring services and service providers.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a class="btn btn-primary btn-lg px-4 gap-3" routerLink="create">Create new Service</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

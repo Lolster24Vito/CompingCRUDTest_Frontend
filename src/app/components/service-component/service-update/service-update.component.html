@@ -1,0 +1,29 @@
+<p>service-update works!</p>
+
+
+{{ service | json }}
+
+
+<div class="container main-container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="text-center">
+                <h2 class="text-center mt-3 text-white">Update personal information</h2>
+            </div>
+            <form [formGroup]="updateServiceForm" (ngSubmit)="updateService()">
+
+              <div class="mb-3">
+                <label for="descriptionInput" class="form-label">Desc name</label>
+                <input  type="text" class="form-control" id="descriptionInput" formControlName="descriptionInput"  [(ngModel)]="service.descriptionService">
+              </div>
+            
+              <div class="mb-3 d-flex flex-column align-items-center ">
+                <button type="submit" class="btn btn-primary w-100">Change service information</button>
+              </div>
+            </form>
+              <div class="mt-5 mx-auto text-center">
+                <a routerLink="/profile" class="btn btn-info">Go back</a>
+              </div>
+        </div>
+    </div>
+</div>

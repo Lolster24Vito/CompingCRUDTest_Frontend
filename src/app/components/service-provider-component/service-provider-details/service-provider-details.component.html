@@ -1,0 +1,11 @@
+<p>service-provider-details works!</p>
+    
+<h3>{{serviceProvider.id}}</h3>
+<h3>{{serviceProvider.name}}</h3>
+<p>Services: 
+    <span *ngFor="let service of serviceProvider.services; let last = last">
+      {{ service.descriptionService }}{{ last ? '' : ', ' }}
+    </span>
+  </p>
+
+  
